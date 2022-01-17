@@ -7,4 +7,9 @@ app.set('layout', 'layouts/layout')
 app.use(expressLayout)
 app.use(express.static('public'))
 
+
+app.get('/', (req,res)=>{
+    res.send('You are on the homepage')
+})
+
 app.listen(process.env.PORT || 3000)
