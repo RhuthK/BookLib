@@ -20,6 +20,9 @@ db.once('open', () => console.log('connected to mongoose'))
 const indexRouter = require('./routes/index')
 app.use('/', indexRouter)
 
+const authorRouter = require('./routes/authors')
+app.use('/authors', authorRouter)
+
 const port = process.env.PORT || 3000
 app.listen(port, ()=>{
     console.log('Running on port ', port)
